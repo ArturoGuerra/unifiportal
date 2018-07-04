@@ -1,0 +1,38 @@
+@mixin margin($margin) {
+    margin: 0 $margin;
+    &.no-init-margin {
+        margin: 0 $margin;
+    }
+}
+
+@mixin margin-gen($default, $medium, $large, $xlarge, $xxlarge) {
+    margin: 0 $default;
+    &.no-init-margin {
+        margin: 0 0%;
+    }
+
+    @media #{$mq-medium} {
+        @include margin($medium);
+    }
+    @media #{$mq-large} {
+        @include margin($large);
+    }
+    @media #{$mq-xlarge} {
+        @include margin($xlarge);
+    }
+    @media #{$mq-xxlarge} {
+        @include margin($xxlarge);
+    }
+}
+
+.container {
+    @include margin-gen(4%, 8%, 12%, 18%, 20%);
+}
+
+.narrow-container {
+    @include margin-gen(6%, 10%, 15%, 20%, 24%);
+}
+
+.small-container {
+    @include margin-gen(10%, 15%, 22%, 27%, 33%);
+}

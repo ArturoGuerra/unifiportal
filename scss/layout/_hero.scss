@@ -1,0 +1,22 @@
+.hero {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .hero-head {
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: inherit;
+    }
+    .hero-body {
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: inherit;
+    }
+    .hero-foot {
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: inherit;
+    }
+}

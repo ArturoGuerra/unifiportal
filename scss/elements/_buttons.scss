@@ -1,0 +1,10 @@
+.button {
+    border-radius: $base-form-border-radius;
+    padding: var(--button-padding);
+}
+
+.buttons {
+    .button {
+        margin: 0.3em;
+    }
+}

@@ -1,0 +1,18 @@
+.card-wrapper {
+    padding: 0.1rem;
+    margin: 0.6em;
+    &.margin-2 {
+        margin: 2em;
+    }
+}
+
+.card {
+    padding: 0.6rem;
+    border-radius: $base-radius;
+    .card-header {
+    }
+    .card-content {
+    }
+    .card-footer {
+    }
+}

@@ -1,0 +1,93 @@
+.navbar {
+    display: flex;
+    position: relative;
+    flex-direction: var(--n-menu-flex-direction);
+
+    .container,
+    .small-container,
+    .narrow-container {
+        display: inherit;
+        flex-direction: inherit;
+        position: inherit;
+        flex-grow: 1;
+    }
+
+    .n-icon {
+        max-height: 2em;
+    }
+
+    .n-item {
+        padding: 0.7em;
+        display: flex;
+        &.dropdown {
+        }
+    }
+
+    .n-brand {
+        display: flex;
+        justify-content: space-between;
+
+        .n-burger {
+            padding: 0.7em 1em;
+            display: var(--n-burger-display);
+
+            & span {
+                background-color: $n-burger;
+                width: 16px;
+                height: 1px;
+                position: relative;
+                margin: auto;
+                display: block;
+                transition: all $base-transition-time ease-in-out;
+                &:first-child {
+                    top: calc(50% - 6px);
+                }
+                &:nth-child(2) {
+                    top: calc(50% - 1px);
+                }
+                &:last-child {
+                    top: calc(50% + 4px);
+                }
+            }
+
+            &.active {
+                span {
+                    &:first-child {
+                        transform: translateY(6.7px) rotate(45deg);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:last-child {
+                        transform: translateY(-5px) rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .n-menu {
+        display: var(--n-menu-display);
+        width: 100%;
+        top: 100%;
+        position: var(--n-menu-position);
+
+        &.active {
+            display: flex;
+        }
+
+        flex-direction: var(--n-menu-flex-direction);
+        flex-grow: 1;
+        justify-content: space-between;
+
+        .n-left {
+            display: flex;
+            flex-direction: var(--n-menu-flex-direction);
+        }
+        .n-right {
+            display: flex;
+            margin-left: var(--n-right-margin-left);
+            flex-direction: var(--n-menu-flex-direction);
+        }
+    }
+}

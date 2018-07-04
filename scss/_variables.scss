@@ -1,0 +1,65 @@
+$base-transition-time: 0.3s;
+
+$min-font-size: 1em;
+$max-font-size: 1.4em;
+
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+$base-form-border-radius: 6px;
+$base-radius: 6px;
+
+$base-fonts: 'Ubuntu',sans-serif;
+
+$background: #064072;
+$surface: #707070;
+$text: #E2DEDE;
+$n-burger: $text;
+
+$colors: (
+    (background, #064072),
+    (on-background, rgba(255,255,255,0.1)),
+    (primary, #00abee),
+    (secondary, white)
+);
+
+body {
+    --n-menu-flex-direction: column;
+    --n-menu-display: none;
+    --n-menu-position: absolute;
+
+    --n-burger-display: block;
+    --n-right-margin-left: 0;
+
+
+    --botgrid-columns: 100%;
+    --botcard-grid-areas: 'pfp text'
+                          'stats stats';
+    --botcard-grid-rows: auto;
+    --botcard-grid-columns: 4.9em auto;
+    --botcard-stats-flex-direction: row;
+
+    @media #{$mq-small} {
+        --botgrid-columns: 50% 50%;
+    }
+    @media #{$mq-medium} {
+        --n-menu-flex-direction: row;
+        --n-menu-display: flex;
+        --n-menu-position: static;
+
+        --n-burger-display: none;
+        --n-right-margin-left: auto;
+
+        --botcard-grid-areas: 'pfp text stats';
+        --botcard-grid-columns: 4.9em auto auto;
+        --botcard-stats-flex-direction: column;
+    }
+    @media #{$mq-large} {
+    }
+    @media #{$mq-xlarge} {
+    }
+    @media #{$mq-xxlarge} {
+    }
+    @media #{$mq-retina} {
+    }
+}

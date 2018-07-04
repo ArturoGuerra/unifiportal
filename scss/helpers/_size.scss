@@ -1,0 +1,86 @@
+// variables
+$decimal: 9;
+
+//fonts
+$d-font-size: 999;
+$d-font-weight: 8;
+@for $i from 0 through $d-font-size {
+    .is-#{$i + 1} {
+        font-size: 1em + $i
+    }
+    @for $a from 1 through $decimal {
+        .is-#{$i + 1}-#{$a} {
+            font-size: (1em + $i) * (1 + $a * 0.1);
+        }
+    }
+}
+
+@for $i from 1 through $decimal {
+    .is-0-#{$i} {
+        font-size: 0em + ($i * 0.1);
+    }
+}
+
+@for $i from 1 through $d-font-weight {
+    .fontw-#{$i * 100} {
+        font-weight: $i * 100;
+    }
+}
+
+
+// Height
+.is-full-height {
+    height: 100vh;
+}
+
+.is-half-height {
+    height: 50vh;
+}
+
+$heights: 100;
+@for $height from 1 through $heights {
+    .is-#{$height}-height {
+        height: #{$height}vh;
+    }
+    .is-min-#{$height}-height {
+        min-height: #{$height}vh;
+    }
+    .is-max-#{$height}-height {
+        max-height: #{$height}vh;
+    }
+}
+
+.grow-height {
+    height: 100%;
+}
+
+$d-height: 999;
+@for $i from 0 through $d-height {
+    .is-height-#{$i + 1} {
+        height: 1em + $i;
+    }
+    @for $a from 1 through $decimal {
+        .is-height-#{$i + 1}-#{$a} {
+            height: (1em + $i) * (1 + $a * 0.1);
+        }
+    }
+}
+
+
+// width
+// parent container determines max width
+.is-full-width {
+    width: 100%;
+}
+
+.is-80-width {
+   width: 80%;
+}
+
+// image css
+$max-img-width: 200;
+@for $i from 1 through $max-img-width {
+   .img-#{$i} {
+       width: $i + 0em;
+   }
+}

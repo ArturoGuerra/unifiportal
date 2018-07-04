@@ -1,0 +1,28 @@
+<head>
+    <meta charset="utf-8">
+    <title>Portal Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body>
+  <div class='hero is-full-height'>
+    <div class='hero-body flex is-0-9'>
+      <div class='small-container flex flex-grow'>
+        <form class='formcard is-full-width flex-center' name="login" action="/authorize" method="post">
+          <div class='input-section is-full-width'>
+            <label>Name / Nombre</label>
+            <input class='on-background-bg secondary' type='text'></input>
+          </div>
+          <div class='input-section is-full-width'>
+            <label>Email</label>
+            <input class='on-background-bg secondary' type='text'></input>
+          </div>
+          <div class='input-button secondary'>
+            <input id="submit" type="submit" name="submit" value="Connect" class='primary-bg secondary'/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

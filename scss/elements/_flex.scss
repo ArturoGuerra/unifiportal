@@ -1,0 +1,69 @@
+// flex display
+.flex {
+    display: flex;
+}
+
+.flex-item {
+    display: flex;
+    padding: 0.6em;
+}
+
+// flex positioning
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+// align
+.flex-a-center {
+    align-items: center;
+}
+
+.flex-a-self-start {
+    align-self: flex-start;
+}
+
+// justify
+.flex-j-center {
+    justify-content: center;
+}
+
+.flex-j-space-around {
+    justify-content: space-around;
+}
+
+.flex-j-space-evenly {
+    justify-content: space-evenly;
+}
+
+// flex content behavior
+// wrap
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-r-wrap {
+    flex-wrap: wrap-reverse;
+}
+
+.flex-no-wrap {
+    flex-wrap: nowrap;
+}
+
+// flow
+.flex-flow-column {
+    flex-flow: column;
+}
+
+// flex size
+.flex-grow {
+    flex-grow: 1;
+}
+
+.flex-shrink {
+    flex-shrink: 1;
+}
+
+.flex-mod-grow {
+    flex-grow: 999;
+}

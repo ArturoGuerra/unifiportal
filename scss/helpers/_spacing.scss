@@ -1,0 +1,70 @@
+// position w/o position: lol
+.margin-h-auto {
+    margin: 0 auto;
+}
+
+.margin-v-auto {
+    margin: auto 0;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.no-margin {
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.margin-right-2 {
+    margin-right: 0.2rem;
+}
+
+.margin-top-1-5 {
+    margin-top: 1.5em;
+}
+
+.margin-bottom-1-5 {
+    margin-bottom: 1.5em;
+}
+
+// position with position
+.fixed {
+    position: fixed;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.p-static {
+    position: static;
+}
+
+.p-inherit {
+    position: inherit;
+}
+
+//line height
+$max-line-height: 2;
+@for $line-height from 0 through $max-line-height {
+    .l-height-#{$line-height} {
+        line-height: $line-height;
+    }
+    @for $a from 1 through 9 {
+        .l-height-#{$line-height}-#{$a} {
+            line-height: $line-height + ($a * 0.1);
+        }
+    }
+}

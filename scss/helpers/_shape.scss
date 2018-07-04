@@ -1,0 +1,9 @@
+// element radius
+$max-border-radius: 18;
+@for $i from 1 through $max-border-radius {
+   .radius-#{$i} {
+       border-radius: $i + 0px
+   }
+}
+
+
